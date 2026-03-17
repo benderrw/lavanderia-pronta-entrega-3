@@ -3,13 +3,9 @@ import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { EmailIcon } from "@/components/icons/EmailIcon";
 import { GoogleIcon } from "@/components/icons/GoogleIcon";
 
-/**
- * URL do iframe do Google Maps. Defina NEXT_PUBLIC_GOOGLE_MAPS_EMBED_SRC no .env
- * com o src gerado em Google Maps (Compartilhar → Incorporar um mapa) para exibir o mapa.
- */
+/** URL do iframe do Google Maps (Lavanderia Pronta Entrega 3, Pelotas/RS). */
 const MAPS_IFRAME_SRC =
-  process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_SRC ||
-  "https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=place_id:Chc8YSD02m7mZm9rYXRhcw";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.3046214544797!2d-52.32386012352447!3d-31.734885211722172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b4d1e0000605%3A0x8ed4d3a17a369dc5!2sLavanderia%20Pronta%20Entrega%203!5e0!3m2!1spt-BR!2sbr!4v1773702346835!5m2!1spt-BR!2sbr";
 
 const GOOGLE_MAPS_LINK =
   "https://www.google.com/maps/search/?api=1&query=Lavanderia+Pronta+Entrega+3&query_place_id=Chc8YSD02m7mZm9rYXRhcw";
