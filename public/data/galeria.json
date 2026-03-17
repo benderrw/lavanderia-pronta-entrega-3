@@ -1,0 +1,14 @@
+[
+  { "id": "1", "title": "Roupas delicadas", "description": "Cuidado especial com peças sensíveis na lavanderia.", "imageUrl": "https://picsum.photos/seed/galeria-1/600/400", "order": 1 },
+  { "id": "2", "title": "Organização", "description": "Cada tipo de tecido no seu devido lugar.", "imageUrl": "https://picsum.photos/seed/galeria-2/600/400", "order": 2 },
+  { "id": "3", "title": "Secagem", "description": "Secagem natural e cuidadosa das peças.", "imageUrl": "https://picsum.photos/seed/galeria-3/600/400", "order": 3 },
+  { "id": "4", "title": "Passadoria", "description": "Passagem profissional para um acabamento impecável.", "imageUrl": "https://picsum.photos/seed/galeria-4/600/400", "order": 4 },
+  { "id": "5", "title": "Dobras", "description": "Dobragem organizada e entrega pronta.", "imageUrl": "https://picsum.photos/seed/galeria-5/600/400", "order": 5 },
+  { "id": "6", "title": "Momentos de cuidado", "description": "O dia a dia da lavanderia com atenção aos detalhes.", "imageUrl": "https://picsum.photos/seed/galeria-6/600/400", "order": 6 },
+  { "id": "7", "title": "Lavagem", "description": "Processo de lavagem com produtos adequados.", "imageUrl": "https://picsum.photos/seed/galeria-7/600/400", "order": 7 },
+  { "id": "8", "title": "Controle de qualidade", "description": "Revisão final antes da entrega.", "imageUrl": "https://picsum.photos/seed/galeria-8/600/400", "order": 8 },
+  { "id": "9", "title": "Entrega", "description": "Suas roupas prontas para usar.", "imageUrl": "https://picsum.photos/seed/galeria-9/600/400", "order": 9 },
+  { "id": "10", "title": "Ambiente", "description": "Estrutura preparada para o melhor resultado.", "imageUrl": "https://picsum.photos/seed/galeria-10/600/400", "order": 10 },
+  { "id": "11", "title": "Detalhes", "description": "Cada etapa feita com cuidado.", "imageUrl": "https://picsum.photos/seed/galeria-11/600/400", "order": 11 },
+  { "id": "12", "title": "Resultado final", "description": "Peças limpas e prontas para você.", "imageUrl": "https://picsum.photos/seed/galeria-12/600/400", "order": 12 }
+]

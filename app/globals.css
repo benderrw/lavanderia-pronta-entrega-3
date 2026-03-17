@@ -1,26 +1,160 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+/* 
+  Diretrizes de design globais
+  - Tipografia:
+    - h1:  clamp(2.5rem, 4vw, 3rem), 700, -0.04em
+    - h2:  clamp(2rem, 3vw, 2.5rem), 600
+    - h3:  clamp(1.5rem, 2.5vw, 2rem), 600
+    - body: 1rem–1.125rem, 400, line-height 1.6
+  - Layout & espaçamento:
+    - Base de 4px (4 / 8 / 12 / 16 / 24 / 32 / 48)
+    - Seções da home com padding-y de 4rem (mobile) a 6rem (desktop)
+    - Largura máxima de conteúdo: 1120px–1200px
+  - Cores:
+    - Primária: azul confiável (#2563eb) para CTAs
+    - Secundária: azul claro (#0ea5e9) para destaques suaves
+    - Fundo neutro levemente azulado para ambientar a temática de lavanderia
+  - Componentes:
+    - Botão primário com bordas arredondadas, sombra suave e estados de hover/focus
+*/
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #f9fafb;
+	--background-soft: #eff6ff;
+	--foreground: #020617;
+	--primary: #2563eb;
+	--primary-soft: #dbeafe;
+	--primary-foreground: #f9fafb;
+	--secondary: #0ea5e9;
+	--secondary-foreground: #0f172a;
+	--muted: #e5e7eb;
+	--muted-foreground: #4b5563;
+	--border: #e5e7eb;
+	--surface: var(--background);
+	--elevated: #ffffff;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-border: var(--border);
+	--color-surface: var(--surface);
+	--color-elevated: var(--elevated);
+	--font-sans: var(--font-sans);
+	--animate-accordion-down: accordion-down 0.2s ease-out;
+	--animate-accordion-up: accordion-up 0.2s ease-out;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: radial-gradient(
+		circle at top,
+		var(--background-soft),
+		var(--background)
+	);
+	color: var(--foreground);
+	font-family:
+		var(--font-sans),
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		sans-serif;
+	text-rendering: optimizeLegibility;
+}
+
+main {
+	min-height: 100vh;
+}
+
+.page-shell {
+	max-width: 72rem;
+	margin-inline: auto;
+	padding-inline: 1.5rem;
+}
+
+.section {
+	padding-block: 3.5rem;
+}
+
+@media (min-width: 768px) {
+	.section {
+		padding-block: 4.5rem;
+	}
+}
+
+/* Títulos e parágrafos: use classes Tailwind nos elementos (ex.: text-3xl font-semibold tracking-tight para h2, text-[10px] para títulos pequenos no footer, leading-relaxed em p) */
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 3px;
+}
+
+/* Botão flutuante WhatsApp: anel que expande e some */
+@keyframes whatsapp-pulse-ring {
+	0% {
+		box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
+	}
+	80% {
+		box-shadow: 0 0 0 14px rgba(16, 185, 129, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+	}
+}
+
+.whatsapp-float-pulse {
+	animation: whatsapp-pulse-ring 3s ease-out infinite;
+}
+
+/* Accordion open/close animation (Radix) */
+@keyframes accordion-down {
+	from {
+		height: 0;
+	}
+	to {
+		height: var(--radix-accordion-content-height);
+	}
+}
+
+@keyframes accordion-up {
+	from {
+		height: var(--radix-accordion-content-height);
+	}
+	to {
+		height: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
 }
