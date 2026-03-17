@@ -31,6 +31,21 @@ export const metadata: Metadata = {
     siteName: "Lavanderia Pronta Entrega 3",
     type: "website",
     locale: "pt_BR",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Lavanderia Pronta Entrega 3 - Lavanderia em Pelotas/RS",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lavanderia Pronta Entrega 3 | Lavanderia em Pelotas/RS",
+    description:
+      "Serviço de lavanderia com pronta entrega em Pelotas/RS. Coleta e entrega, cuidado com peças delicadas e atendimento personalizado.",
+    images: ["/og.png"],
   },
 };
 

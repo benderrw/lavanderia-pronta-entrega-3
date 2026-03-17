@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, Images } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useGsapFadeIn } from "@/lib/gsap";
 
 export function Hero() {
@@ -15,7 +15,7 @@ export function Hero() {
     >
       <div className="pointer-events-none absolute inset-0">
         <Image
-          src="/oli-woodman-f4jsI88K7ds-unsplash.jpg"
+          src="/hero-background.jpg"
           alt=""
           fill
           className="object-cover opacity-70"
@@ -48,13 +48,6 @@ export function Hero() {
             >
               Pedir orçamento rápido
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </a>
-            <a
-              href="#galeria"
-              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-5 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-primary/40 hover:text-primary"
-            >
-              <Images className="h-4 w-4" aria-hidden="true" />
-              Ver Galeria
             </a>
           </div>
 

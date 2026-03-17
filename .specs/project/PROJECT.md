@@ -29,10 +29,10 @@ O site existe para facilitar o primeiro contato do cliente, explicar os serviço
 
 A página inicial atua como **landing page principal**, composta pelas seções implementadas em `app/page.tsx` e componentes em `components/*`:
 
-- **Hero (`Hero`)** — apresenta a proposta de valor (“roupa pronta, cheirosa e entregue no tempo certo”) com CTA forte para WhatsApp e atalho para a galeria.  
+- **Hero (`Hero`)** — apresenta a proposta de valor (“roupa pronta, cheirosa e entregue no tempo certo”) com CTA forte para WhatsApp.  
 - **Serviços (`ServicesCarousel`)** — lista os principais tipos de serviços (por kg, peças delicadas, volumosos, tapetes, passadoria).  
 - **Sobre (`AboutSection`)** — conta a história e a forma de trabalho da lavanderia, reforçando proximidade e praticidade.  
-- **Depoimentos & galeria (`TestimonialsCarousel`, `GalleryBento`)** — reforçam confiança visual e social.  
+- **Depoimentos (`TestimonialsCarousel`)** — reforçam confiança visual e social.  
 - **Planos (`PlansSection`)** — mostra faixas de preço e exemplos de serviços para alinhar expectativas.  
 - **Contato & FAQ (`ContactSection`, `FaqSection`)** — concentram endereço, canais de contato e respostas rápidas às dúvidas comuns.
 
